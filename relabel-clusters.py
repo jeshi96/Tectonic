@@ -30,6 +30,6 @@ for line in clusters:
     l = []
     for i in map(int, line.split()):
         l.append(inv_vid_map[i])
-    out_clusters.write(' '.join(map(str, l)) + '\n')
+    out_clusters.write('\t'.join(map(str, l)) + '\n')
 out_clusters.close()
 clusters.close()
