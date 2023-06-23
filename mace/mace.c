@@ -10,6 +10,7 @@
     Takeaki Uno, to notify the news about this code for the users.
    For the commercial use, please make a contact to Takeaki Uno. */
 
+// Added line 74 in mace.c to support specifying -u on the command line.
 
 #ifndef _mace_c_
 #define _mace_c_
