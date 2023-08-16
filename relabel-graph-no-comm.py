@@ -14,7 +14,7 @@ out_map = open(sys.argv[3], 'wb')
 vid = 0
 vid_map = {}
 for line in graph:
-    if line[0] == '#':
+    if line[0] == '#' or len(line[0]) == 0:
         continue
     e = list(line.split())
     e[0] = int(e[0])

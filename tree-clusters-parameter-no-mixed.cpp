@@ -140,11 +140,14 @@ int main(int argc, char **argv) {
     in_graph.close();
     vector<double> mxadj(n, 0.0);
     FORE (it, edges) {
-        mxadj[it->u] += it->w;
-        mxadj[it->v] += it->w;
+        // mxadj[it->u] += it->w;
+        // mxadj[it->v] += it->w;
+        mxadj[it->u] += 1;
+        mxadj[it->v] += 1;
     }
     FORE (it, edges) {
-        double check_mxadj = max(mxadj[it->u], mxadj[it->v]);
+        // double check_mxadj = max(mxadj[it->u], mxadj[it->v]);
+        double check_mxadj = mxadj[it->u] + mxadj[it->v];
         if (check_mxadj == 0){
           it->w = 0;
         }

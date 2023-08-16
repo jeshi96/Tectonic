@@ -31,7 +31,7 @@ for u in range(n):
         weight += 1
         if i == len(edges[u]) - 1 or edges[u][i + 1] != edges[u][i]:
             #if weight > 1:
-            out_graph.write(' '.join(map(str, [u, edges[u][i], weight - 1])) + '\n')
+            out_graph.write(' '.join(map(str, [u, edges[u][i], weight - 1])) + '\n') # triangle degree of the edge
             #out_mixed.write(' '.join(map(str, [u, edges[u][i], weight])) + '\n')
             weight = 0
 out_graph.close()
